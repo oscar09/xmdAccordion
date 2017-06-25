@@ -35,6 +35,21 @@ module.exports = function (grunt) {
 				'<%= yeoman.app %>/source/{,**/}*.js'
 			]
 		},
+		copy: {
+			options : {
+		        processContentExclude: ['*.{png,gif,jpg,ico}']
+
+		    },
+			app: {
+				expand: true,
+                dot: true,
+                cwd: 'source/assets/',
+                dest: 'build',
+                src: [
+                    '*.png'
+                ]
+			}
+		},
 		nginlinetemplates: {
 			app: {
 				src: 'source/**/*.html',
@@ -92,7 +107,8 @@ module.exports = function (grunt) {
 			'jshint:all',
 			'karma',
 			'replace',
-			'nginlinetemplates'
+			'nginlinetemplates',
+			'copy'
 		]
 	);
 
