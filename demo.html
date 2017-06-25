@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+	<link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.css">
+	<script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+
+	<link rel="stylesheet" href="source/assets/xmdAccordion.css">
+	<script type="text/javascript" src="source/xmdAccordion.directive.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="MainController">
+	<h2>xmdAccordion demo</h2>
+	<div layout="row">
+		<div layout="column" flex>
+			<h4>isOpen attribute not set</h4>
+			<xmd-accordion label="HEADER TITLE" flex>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat at est eu auctor. Duis fermentum augue non magna sodales scelerisque. Sed eget lorem quam. Nunc maximus dui nec turpis aliquam pharetra. Cras sit amet nisl quis odio efficitur finibus vel tincidunt purus. Praesent imperdiet sem at pulvinar ultrices. Nullam et justo varius elit elementum placerat.
+
+Nulla hendrerit a mauris non scelerisque. Cras elit enim, rhoncus sit amet posuere sed, pulvinar sed ligula. Donec suscipit non nulla id tristique. Etiam eget arcu dignissim, blandit eros eget, semper felis. Sed ex orci, molestie eu semper sit amet, consequat vitae ligula. Pellentesque vitae gravida lacus, sit amet molestie sem. Quisque scelerisque varius dolor, scelerisque dapibus purus iaculis vitae. Sed quis quam nulla. Maecenas sit amet ex sapien. Nunc at mollis purus. Morbi ac condimentum augue. Duis vitae quam nisi. Sed congue, nisl sit amet facilisis mattis, augue erat tristique ligula, a luctus ligula felis non odio. Aenean sagittis ac erat vitae placerat.</p>
+			</xmd-accordion>
+		</div>
+		<div layout="column" flex>
+			<h4>isOpen attribute set</h4>
+			<xmd-accordion label="HEADER TITLE" is-open="true" flex>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat at est eu auctor. Duis fermentum augue non magna sodales scelerisque. Sed eget lorem quam. Nunc maximus dui nec turpis aliquam pharetra. Cras sit amet nisl quis odio efficitur finibus vel tincidunt purus. Praesent imperdiet sem at pulvinar ultrices. Nullam et justo varius elit elementum placerat.
+
+Nulla hendrerit a mauris non scelerisque. Cras elit enim, rhoncus sit amet posuere sed, pulvinar sed ligula. Donec suscipit non nulla id tristique. Etiam eget arcu dignissim, blandit eros eget, semper felis. Sed ex orci, molestie eu semper sit amet, consequat vitae ligula. Pellentesque vitae gravida lacus, sit amet molestie sem. Quisque scelerisque varius dolor, scelerisque dapibus purus iaculis vitae. Sed quis quam nulla. Maecenas sit amet ex sapien. Nunc at mollis purus. Morbi ac condimentum augue. Duis vitae quam nisi. Sed congue, nisl sit amet facilisis mattis, augue erat tristique ligula, a luctus ligula felis non odio. Aenean sagittis ac erat vitae placerat.</p>
+			</xmd-accordion>
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript">
+	var myApp = angular.module('myApp',['ngMaterial', 'xmd.directives.xmdAccordion']);
+	myApp.controller('MainController', ['$scope', function($scope) {
+
+	}]);
+</script>
+</body>
+</html>
