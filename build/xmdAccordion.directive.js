@@ -11,7 +11,7 @@
  */
 angular.module('xmd.directives.xmdAccordion', [])
 	.run(['$templateCache', function($templateCache) {
-	$templateCache.put('xmdAccordion.html', '<div layout=column class=x-accordion><div class=x-header layout=row><h2></h2></div><div class=x-content layout=column ng-transclude="" flex=""></div></div>');
+	$templateCache.put('xmdAccordion.html', '<div layout=column class=x-accordion><div class=x-header layout=row><h2>{{label}}</h2></div><div class=x-content layout=column ng-transclude="" flex=""></div></div>');
 }])
 
 	.directive('xmdAccordion', [
@@ -21,6 +21,7 @@ angular.module('xmd.directives.xmdAccordion', [])
 				templateUrl: 'xmdAccordion.html',
 				transclude: true,
 				scope: {
+					label: '@'
 				},
 				link: function postLink(scope, element, attr)
 				{
@@ -30,10 +31,12 @@ angular.module('xmd.directives.xmdAccordion', [])
 					_main_element = angular.element(_main_element);
 
 					/* Sets the accordion header. */
+					/*
 					if(attr.label)
 					{
 						_header_title_element.text(attr.label);
 					}
+					*/
 
 					/* Checks if the accordion must start open */
 					if(attr.isOpen && attr.isOpen === 'true')
